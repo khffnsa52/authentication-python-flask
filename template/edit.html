@@ -1,0 +1,35 @@
+//templates/edit.html
+{% extends "layout.html" %}
+{% block body %}
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update/{{dt.id}}" method="POST">
+          <div class="form-group">
+            <input type="text" name="age" value="{{dt.age}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="sex" value="{{dt.sex}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="chest_pain_type" value="{{dt.chest_pain_type}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="cholesterol" value="{{dt.cholesterol}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="max_hr" value="{{dt.max_hr}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="heart_disease" value="{{dt.heart_disease}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
